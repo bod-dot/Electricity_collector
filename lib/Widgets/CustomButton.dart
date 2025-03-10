@@ -3,11 +3,11 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:untitled7/main.dart';
 
 class Custombutton extends StatelessWidget {
-   Custombutton({super.key,required this.isLoading , required this.onPressed,required this.lable,this.color});
+  const  Custombutton({super.key,required this.isLoading , required this.onPressed,required this.lable,this.color});
   final bool isLoading ;
  final VoidCallback onPressed;
   final String lable;
-  Color ?color;
+ final Color ?color;
 
   @override
   Widget build(BuildContext context) {

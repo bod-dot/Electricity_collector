@@ -3,16 +3,22 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:untitled7/main.dart';
 
 class Customtextfrom extends StatelessWidget {
-   Customtextfrom({super.key,  this.obscureText=false ,required this.label, this.onPressed,required this.icon,this.isPassword=false});
- bool obscureText ;
+  const  Customtextfrom({super.key,  this.obscureText=false ,required this.label, this.onPressed,required this.icon,this.isPassword=false, this.textInputType, required this.textEditingController});
+final  bool obscureText ;
 final String label;
-bool ? isPassword;
+final bool ? isPassword;
 final Icon icon;
- VoidCallback ?onPressed;
+final  VoidCallback ?onPressed;
+final TextInputType? textInputType;
+final TextEditingController textEditingController;
   @override
   Widget build(BuildContext context) {
     return TextFormField(
+      keyboardType:textInputType ,
+
+      controller: textEditingController,
       obscureText: obscureText,
+      
       decoration: InputDecoration(
         labelText: label,
         labelStyle: GoogleFonts.cairo(
@@ -44,8 +50,11 @@ final Icon icon;
         fontWeight: FontWeight.w600,
       ),
       validator: (value) {
-        if (value == null || value.isEmpty) return 'هذا الحقل مطلوب';
-        if (value.length < 8) return 'يجب أن تكون كلمة المرور 8 أحرف على الأقل';
+        if (value == null || value.isEmpty) return ' $label مطلوب';
+       if(isPassword??false)
+       {
+         if (value.length < 6) return 'يجب أن تكون كلمة المرور 6 أحرف على الأقل';
+       }
         return null;
       },
     );;

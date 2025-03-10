@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:untitled7/Pages/Drawer.dart';
-import 'package:untitled7/Pages/LoaginPage.dart';
-import 'package:untitled7/Pages/chagePassword.dart';
-import 'package:untitled7/Views/HomebuildBackgroundEffects.dart';
-import 'package:untitled7/Views/HomebuildMainContent.dart';
+import 'package:untitled7/Views/Pages/Drawer.dart';
+
+import 'package:untitled7/Views/Pages/chagePassword.dart';
+import 'package:untitled7/Widgets/HomebuildBackgroundEffects.dart';
+import 'package:untitled7/Widgets/HomebuildMainContent.dart';
 import 'package:untitled7/Widgets/CustomAppBar.dart';
+
+import 'LoaginPage.dart';
 
 
 
@@ -12,6 +14,8 @@ import 'package:untitled7/Widgets/CustomAppBar.dart';
 
 
 class MainScreen extends StatefulWidget {
+  const MainScreen({super.key});
+  static String Id="HomePage";
   @override
   State<MainScreen> createState() => _MainScreenState();
 }
@@ -28,7 +32,7 @@ class _MainScreenState extends State<MainScreen> {
         // تنفيذ أكشن عن التطبيق
         break;
       case 2:
-       Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=>LoginScreen()));
+       Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=> const  LoginScreen()));
         break;
     }
   }

@@ -34,9 +34,11 @@ dependencies:
   flutter_staggered_animations: ^1.1.1
   flutter_svg: ^2.0.7
   lottie: ^2.7.0
-  syncfusion_flutter_charts: ^23.1.40
   curved_navigation_bar: ^1.0.3 # أضف الإصدار هنا
   cupertino_icons: ^1.0.6 
+  flutter_bloc:
+  awesome_snackbar_content: ^0.1.5
+
  
 
 

@@ -2,7 +2,10 @@
 
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:untitled7/Pages/LoaginPage.dart';
+import 'package:untitled7/Views/Pages/HomePage.dart';
+
+import 'Views/Pages/LoaginPage.dart';
+
 
 
 const KColorPrimer = Color(0xff1565C0);
@@ -17,6 +20,13 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+       routes: {
+        LoginScreen.Id: (context) => const  LoginScreen(),
+        MainScreen.Id:(context)=>const MainScreen(),
+       },
+       
+
+
       title: 'نظام إدارة العملاء',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:untitled7/Pages/ReportsScreen.dart';
-import 'package:untitled7/Pages/TakeReadingScreen.dart';
+import 'package:untitled7/Views/Pages/ReportsScreen.dart';
+import 'package:untitled7/Views/Pages/TakeReadingScreen.dart';
 import 'package:untitled7/Widgets/MainMenuItemButton.dart';
 
 class Homebuildrowactionbuttons extends StatelessWidget {

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:untitled7/Views/HomebuildAnimatedClientCards.dart';
-import 'package:untitled7/Views/HomebuildRowActionButtons.dart';
+import 'package:untitled7/Widgets/HomebuildAnimatedClientCards.dart';
+import 'package:untitled7/Widgets/HomebuildRowActionButtons.dart';
 import 'package:untitled7/Widgets/CustomTitleInHomePage.dart';
 import 'package:untitled7/helper/constans.dart';
 
