@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:untitled7/main.dart';
+
+import '../helper/constans.dart';
 
 class Customtitleinhomepage extends StatelessWidget {
   const Customtitleinhomepage({super.key,required this.title});
@@ -15,7 +16,7 @@ class Customtitleinhomepage extends StatelessWidget {
         style: GoogleFonts.cairo(
           fontSize: 22,
           fontWeight: FontWeight.bold,
-          color: KColorPrimer,
+          color: kColorPrimer,
         ),
       ),
     );

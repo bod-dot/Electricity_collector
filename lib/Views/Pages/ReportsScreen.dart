@@ -1,7 +1,9 @@
 // ملف reports_screen.dart
 import 'package:flutter/material.dart';
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
-import 'package:untitled7/main.dart';
+
+
+import '../../helper/constans.dart';
 
 
 class ReportsScreen extends StatefulWidget {
@@ -43,10 +45,10 @@ class _ReportsScreenState extends State<ReportsScreen> {
     return Scaffold(
       appBar: AppBar(
       title: const Text('نظام التقارير'),
-      backgroundColor: KColorPrimer,
+      backgroundColor: kColorPrimer,
       centerTitle: true,
       elevation: 4,
-      shadowColor: KColorPrimer.withOpacity(0.3),
+      shadowColor: kColorPrimer.withOpacity(0.3),
     ),
       body: _buildContent(),
       bottomNavigationBar: _buildBottomNavBar(),
@@ -83,7 +85,7 @@ class _ReportsScreenState extends State<ReportsScreen> {
   Widget _buildTableHeader() {
     return Container(
       decoration: BoxDecoration(
-        color: KColorFoured,
+        color: kColorFoured,
         borderRadius: BorderRadius.circular(8),
         boxShadow: [
           BoxShadow(
@@ -168,8 +170,8 @@ class _ReportsScreenState extends State<ReportsScreen> {
     return CurvedNavigationBar(
       index: _currentIndex,
       height: 65,
-      color: KColorPrimer,
-      buttonBackgroundColor: KColorSecond,
+      color: kColorPrimer,
+      buttonBackgroundColor: kColorSecond,
       backgroundColor: Colors.transparent,
       animationDuration: const Duration(milliseconds: 500),
       items: [

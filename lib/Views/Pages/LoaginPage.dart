@@ -28,7 +28,7 @@ class _LoginScreenState extends State<LoginScreen> {
         child: BlocConsumer<LoginCubitCubit, LoginState>(
           listener: (context, state) {
             if (state is LoginSuccess) {
-              Navigator.pushReplacementNamed(context, MainScreen.Id);
+              Navigator.pushReplacementNamed(context, MainScreen.id);
             } else if (state is LoginFauild) {
               Mysnackbar().showSnackbarError(
                   title: "error",

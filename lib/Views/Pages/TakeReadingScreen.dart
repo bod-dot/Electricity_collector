@@ -4,7 +4,9 @@ import 'package:flutter_staggered_animations/flutter_staggered_animations.dart';
 import 'package:lottie/lottie.dart';
 import 'package:untitled7/Widgets/CusotmTextFormInTackNewReanding.dart';
 import 'package:untitled7/Widgets/CustomButton.dart';
-import 'package:untitled7/main.dart';
+
+
+import '../../helper/constans.dart';
 
 
 
@@ -36,7 +38,7 @@ class _TakeReadingScreenState extends State<TakeReadingScreen> {
       elevation: 0,
       iconTheme: const IconThemeData(color: Colors.white),
     ),
-      backgroundColor: KColorPrimer, // تغيير هنا
+      backgroundColor: kColorPrimer, // تغيير هنا
       body: AnimationLimiter(
         child: SingleChildScrollView(
           child: Padding(
@@ -85,7 +87,7 @@ class _TakeReadingScreenState extends State<TakeReadingScreen> {
                               setState(() => _isSending = false);
                             });
                           }
-                        }, lable: "ارسال القراءة",color: KColorSecond,),
+                        }, lable: "ارسال القراءة",color: kColorSecond,),
                       ],
                     ),
                   ),

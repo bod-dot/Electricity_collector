@@ -14,10 +14,11 @@ void loginCub({required int areaId,required int phoneNumber,required String pass
   try{
 
     bool isLogin=  await LoginContrloller().loginMeth(areaId: areaId, phoneNumber: phoneNumber, passwrod: passwrod);
-    isLogin ?emit(LoginSuccess()):emit(LoginWrongPasswrodOrEmail());
+    isLogin ?emit(LoginWrongPasswrodOrEmail()):emit(LoginSuccess());
 
   }catch(e)
   {
+    print(e.toString());
     emit(LoginFauild(error: e.toString()));
   }
 

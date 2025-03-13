@@ -25,7 +25,7 @@ class Cusotmtextformintacknewreanding extends StatelessWidget {
             validator: validator,
             decoration: InputDecoration(
               labelText: label,
-              labelStyle: GoogleFonts.cairo(color: KColorThreed),
+              labelStyle: GoogleFonts.cairo(color: kColorThreed),
               prefixIcon: Icon(icon, color: Colors.amber),
               border: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(15),

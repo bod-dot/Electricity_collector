@@ -1,15 +1,16 @@
  import 'package:flutter/material.dart';
 import 'package:untitled7/helper/constans.dart';
+import 'package:untitled7/models/Customer.dart';
 
-  List<Widget> buildClientDetails(Map<String, dynamic> item) {
+  List<Widget> buildClientDetails(Customer item) {
     return [
-      CustomDailRow('رقم المشترك:', item['subscriber']),
-      CustomDailRow('تاريخ التسديد:', item['date']),
-      CustomDailRow('قرءة العداد:', '${item['amount']} ر.س'),
+      customDailRow('رقم المشترك:', "${item.customerID}"),
+      customDailRow('تاريخ التسديد:', item.customerMovementDate !=null ?'${item.customerMovementDate!.year}-${item.customerMovementDate!.month}-${item.customerMovementDate!.day}':'--'),
+      customDailRow('المتاخرة', '${item.customerTotalDues} ر.س'),
     ];
   }
 
-Widget CustomDailRow(String title, String value) {
+Widget customDailRow(String title, String value) {
     return Padding(
       padding: const EdgeInsets.symmetric(vertical: 6.0),
       child: Row(
@@ -25,7 +26,7 @@ Widget CustomDailRow(String title, String value) {
           Text(
             value,
             style:const TextStyle(
-              color: KColorPrimer,
+              color: kColorPrimer,
               fontWeight: FontWeight.w500,
               fontSize: 18,
             ),

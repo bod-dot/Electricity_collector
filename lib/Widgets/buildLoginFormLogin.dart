@@ -5,7 +5,9 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:untitled7/Widgets/CustomButton.dart';
 import 'package:untitled7/Widgets/CustomTextFrom.dart';
 import 'package:untitled7/cubit/login_cubit/login_cubit.dart';
-import 'package:untitled7/main.dart';
+
+
+import '../helper/constans.dart';
 
 class BuildLoginFormLogin extends StatefulWidget {
   const BuildLoginFormLogin({super.key});
@@ -44,7 +46,7 @@ class _BuildLoginFormLoginState extends State<BuildLoginFormLogin> {
               label: "رقم المنطقة",
               icon: const Icon(
                 Icons.location_on_outlined,
-                color: KColorPrimer,
+                color: kColorPrimer,
               ),
               textInputType: TextInputType.number,
               textEditingController: area,
@@ -52,8 +54,9 @@ class _BuildLoginFormLoginState extends State<BuildLoginFormLogin> {
             const SizedBox(height: 20),
             Customtextfrom(
               label: "رقم الهاتف",
-              icon: const Icon(Icons.phone_android, color: KColorPrimer),
+              icon: const Icon(Icons.phone_android, color: kColorPrimer),
               textEditingController: phoneNumber,
+              textInputType: TextInputType.number,
             ),
             const SizedBox(height: 20),
             Customtextfrom(
@@ -67,7 +70,7 @@ class _BuildLoginFormLoginState extends State<BuildLoginFormLogin> {
               label: "كلمة السر",
               icon: const Icon(
                 Icons.lock_open_outlined,
-                color: KColorPrimer,
+                color: kColorPrimer,
               ),
               textEditingController: passwrod,
             ),

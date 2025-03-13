@@ -4,11 +4,12 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:untitled7/Widgets/CustometailRow.dart';
 import 'package:untitled7/helper/constans.dart';
 
+import '../models/Customer.dart';
+
 class Homebuildanimatedclientcards extends StatelessWidget {
-   Homebuildanimatedclientcards({super.key, required this.dataItems});
+   const Homebuildanimatedclientcards({super.key, required this.customers});
   
- 
-  final  List<Map<String,dynamic>> dataItems;
+    final List<Customer> customers;
 
   @override
   Widget build(BuildContext context) {
@@ -17,10 +18,10 @@ class Homebuildanimatedclientcards extends StatelessWidget {
         height: 280,
         child: ListView.builder(
           scrollDirection: Axis.horizontal,
-          itemCount: dataItems.length,
+          itemCount: customers.length<6?customers.length:6,
           physics:const BouncingScrollPhysics(),
           itemBuilder: (context, index) {
-            final item = dataItems[index];
+            final item = customers[index];
             return AnimationConfiguration.staggeredList(
               position: index,
               duration:const  Duration(milliseconds: 500),
@@ -33,7 +34,7 @@ class Homebuildanimatedclientcards extends StatelessWidget {
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(20),
                       gradient: LinearGradient(
-                        colors: [Colors.white, KColorFoured.withOpacity(0.3)],
+                        colors: [Colors.white, kColorFoured.withOpacity(0.3)],
                         begin: Alignment.topLeft,
                         end: Alignment.bottomRight,
                       ),
@@ -42,7 +43,7 @@ class Homebuildanimatedclientcards extends StatelessWidget {
                           color: Colors.grey.withOpacity(0.1),
                           spreadRadius: 2,
                           blurRadius: 10,
-                          offset: Offset(3, 3),
+                          offset: const  Offset(3, 3),
                         ),
                        const  BoxShadow(
                           color: Colors.white,
@@ -58,9 +59,9 @@ class Homebuildanimatedclientcards extends StatelessWidget {
                         Row(
                           children: [
                             CircleAvatar(
-                              backgroundColor: KColorPrimer,
+                              backgroundColor: kColorPrimer,
                               child: Text(
-                                item['name'][0],
+                                item.customerName[0],
                                 style:  const TextStyle(
                                   color: Colors.white,
                                   fontSize: 22,
@@ -70,11 +71,11 @@ class Homebuildanimatedclientcards extends StatelessWidget {
                            const SizedBox(width: 10),
                             Expanded(
                               child: Text(
-                                item['name'],
+                                item.customerName,
                                 style: GoogleFonts.cairo(
                                   fontSize: 22,
                                   fontWeight: FontWeight.bold,
-                                  color: KColorPrimer,
+                                  color: kColorPrimer,
                                 ),
                               ),
                             ),

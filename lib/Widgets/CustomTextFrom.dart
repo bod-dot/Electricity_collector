@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:untitled7/main.dart';
+
+import '../helper/constans.dart';
 
 class Customtextfrom extends StatelessWidget {
   const  Customtextfrom({super.key,  this.obscureText=false ,required this.label, this.onPressed,required this.icon,this.isPassword=false, this.textInputType, required this.textEditingController});
@@ -22,20 +23,20 @@ final TextEditingController textEditingController;
       decoration: InputDecoration(
         labelText: label,
         labelStyle: GoogleFonts.cairo(
-          color: KColorPrimer,
+          color: kColorPrimer,
           fontWeight: FontWeight.w600,
         ),
         prefixIcon: icon,
         suffixIcon: isPassword!?IconButton(
           icon: Icon(
             obscureText? Icons.visibility_off : Icons.visibility,
-            color: KColorPrimer,
+            color: kColorPrimer,
           ),
           onPressed: onPressed,
         ): null,
         focusedBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(15),
-          borderSide:const BorderSide(color: KColorPrimer, width: 2),
+          borderSide:const BorderSide(color: kColorPrimer, width: 2),
         ),
         enabledBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(15),
@@ -46,7 +47,7 @@ final TextEditingController textEditingController;
         contentPadding: const EdgeInsets.symmetric(vertical: 18, horizontal: 20),
       ),
       style: GoogleFonts.cairo(
-        color: KColorPrimer,
+        color: kColorPrimer,
         fontWeight: FontWeight.w600,
       ),
       validator: (value) {
@@ -57,6 +58,7 @@ final TextEditingController textEditingController;
        }
         return null;
       },
-    );;
+    );
   }
 }
+

@@ -29,8 +29,8 @@ class Homebuildmaincontent extends StatelessWidget {
             // شريط التقدم الذي يعبر عن معدل التقدم
             LinearProgressIndicator(
               value: averageProgress,
-              backgroundColor: KColorFoured,
-              valueColor :const  AlwaysStoppedAnimation<Color>(KColorPrimer),
+              backgroundColor: kColorFoured,
+              valueColor :const  AlwaysStoppedAnimation<Color>(kColorPrimer),
               minHeight: 8,
             ),
            const  SizedBox(height: 20),

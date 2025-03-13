@@ -16,7 +16,7 @@ import 'package:untitled7/helper/constans.dart';
       flexibleSpace: Container(
         decoration:const BoxDecoration(
           gradient: LinearGradient(
-            colors: [KColorPrimer, KColorSecond],
+            colors: [kColorPrimer, kColorSecond],
             begin: Alignment.topLeft,
             end: Alignment.bottomRight,
           ),

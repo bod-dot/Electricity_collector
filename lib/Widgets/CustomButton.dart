@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:untitled7/main.dart';
+
+
+import '../helper/constans.dart';
 
 class Custombutton extends StatelessWidget {
   const  Custombutton({super.key,required this.isLoading , required this.onPressed,required this.lable,this.color});
@@ -15,7 +17,7 @@ class Custombutton extends StatelessWidget {
       width: double.infinity,
       child: ElevatedButton(
         style: ElevatedButton.styleFrom(
-          backgroundColor:  color??KColorPrimer,
+          backgroundColor:  color??kColorPrimer,
           padding: const EdgeInsets.symmetric(vertical: 16),
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(12),
@@ -34,6 +36,6 @@ class Custombutton extends StatelessWidget {
                 ),
               ),
       ),
-    );;
+    );
   }
 }

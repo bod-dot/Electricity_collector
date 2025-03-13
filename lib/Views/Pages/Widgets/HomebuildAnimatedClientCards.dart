@@ -7,7 +7,7 @@ import 'package:untitled7/helper/constans.dart';
 import '../../../Widgets/CustometailRow.dart';
 
 class Homebuildanimatedclientcards extends StatelessWidget {
-   Homebuildanimatedclientcards({super.key, required this.dataItems});
+  const Homebuildanimatedclientcards({super.key, required this.dataItems});
   
  
   final  List<Map<String,dynamic>> dataItems;
@@ -35,7 +35,7 @@ class Homebuildanimatedclientcards extends StatelessWidget {
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(20),
                       gradient: LinearGradient(
-                        colors: [Colors.white, KColorFoured.withOpacity(0.3)],
+                        colors: [Colors.white, kColorFoured.withOpacity(0.3)],
                         begin: Alignment.topLeft,
                         end: Alignment.bottomRight,
                       ),
@@ -60,7 +60,7 @@ class Homebuildanimatedclientcards extends StatelessWidget {
                         Row(
                           children: [
                             CircleAvatar(
-                              backgroundColor: KColorPrimer,
+                              backgroundColor: kColorPrimer,
                               child: Text(
                                 item['name'][0],
                                 style:  const TextStyle(
@@ -76,14 +76,14 @@ class Homebuildanimatedclientcards extends StatelessWidget {
                                 style: GoogleFonts.cairo(
                                   fontSize: 22,
                                   fontWeight: FontWeight.bold,
-                                  color: KColorPrimer,
+                                  color: kColorPrimer,
                                 ),
                               ),
                             ),
                           ],
                         ),
                         const SizedBox(height: 20),
-                        ...buildClientDetails(item),
+                       // ...buildClientDetails(item),
                       ],
                     ),
                   ),

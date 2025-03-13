@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:untitled7/main.dart';
+
+import '../helper/constans.dart';
 
 class Mainmenuitembutton extends StatelessWidget {
    Mainmenuitembutton({required this.icon, required this.label, required this.onTap});
@@ -34,9 +35,9 @@ class Mainmenuitembutton extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Icon(icon, color: KColorPrimer, size: 30),
+            Icon(icon, color: kColorPrimer, size: 30),
            const SizedBox(height: 8),
-             Text(label, style:const  TextStyle(color: KColorPrimer, fontSize: 18)),
+             Text(label, style:const  TextStyle(color: kColorPrimer, fontSize: 18)),
           ],
         ),
       ),

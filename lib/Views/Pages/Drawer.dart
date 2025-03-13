@@ -1,8 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:untitled7/main.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 
+import '../../helper/constans.dart';
+
+String ?name;
+int? areaId;
 
 class CustomDrawer extends StatefulWidget {
   final Function(int) onItemSelected;
@@ -20,12 +24,20 @@ class _CustomDrawerState extends State<CustomDrawer>
   bool _isLoading = false;
 
   @override
-  void initState() {
+  void initState()  {
     super.initState();
+  getnameAndAreaID();
     _animationController = AnimationController(
       vsync: this,
       duration: const Duration(milliseconds: 500),
     )..forward();
+  }
+  void getnameAndAreaID()
+  async{
+      SharedPreferences shared = await SharedPreferences.getInstance();
+    name=shared.getString("EmployeeName");
+    areaId=shared.getInt('areaId');
+
   }
 
   @override
@@ -61,7 +73,7 @@ class _CustomDrawerState extends State<CustomDrawer>
             child: Container(
               width: MediaQuery.of(context).size.width * 0.75,
               decoration: BoxDecoration(
-                color: KColorPrimer,
+                color: kColorPrimer,
                 boxShadow: [
                   BoxShadow(
                     color: Colors.black.withOpacity(0.4),
@@ -95,10 +107,10 @@ class _CustomDrawerState extends State<CustomDrawer>
     );
   }
 
-  Widget _buildHeader() {
+  Widget _buildHeader()  {
     return UserAccountsDrawerHeader(
       decoration: BoxDecoration(
-        color: KColorSecond,
+        color: kColorSecond,
         boxShadow: [
           BoxShadow(
             color: Colors.black.withOpacity(0.3),
@@ -108,23 +120,25 @@ class _CustomDrawerState extends State<CustomDrawer>
           ),
         ],
       ),
-      accountName: Text(
-        "منطقة الشمال",
+       accountEmail: Text(
+        "رقم المنطقة : $areaId",
         style: GoogleFonts.cairo(
           fontSize: 18,
-          color: Colors.white.withOpacity(0.9),
-        ),
-      ),
-      accountEmail: Text(
-        "مستخدم: أحمد محمد",
-        style: GoogleFonts.cairo(
-          fontSize: 22,
-          fontWeight: FontWeight.bold,
+          
           color: Colors.white,
         ),
       ),
+      accountName: Text(
+        " مستخدم:  $name",
+        style: GoogleFonts.cairo(
+          fontWeight: FontWeight.bold,
+          fontSize: 22,
+          color: Colors.white.withOpacity(0.9),
+        ),
+      ),
+     
       currentAccountPicture: CircleAvatar(
-        backgroundColor: KColorThreed,
+        backgroundColor: kColorThreed,
         child: AnimatedSwitcher(
           duration: const Duration(milliseconds: 300),
           child: _isLoading
@@ -149,7 +163,7 @@ class _CustomDrawerState extends State<CustomDrawer>
           duration: const Duration(milliseconds: 300),
           child: _isLoading && _selectedIndex == index
               ?  const CircularProgressIndicator(
-                  color: KColorThreed,
+                  color: kColorThreed,
                   strokeWidth: 2,
                 )
               : Icon(icon, color: Colors.white, size: 28),

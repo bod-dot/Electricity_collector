@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:untitled7/main.dart';
+
+
+import '../helper/constans.dart';
 
 class Homebuildbackgroundeffects extends StatelessWidget {
   const Homebuildbackgroundeffects({super.key});
@@ -17,7 +19,7 @@ class Homebuildbackgroundeffects extends StatelessWidget {
             decoration: BoxDecoration(
               shape: BoxShape.circle,
               gradient: RadialGradient(
-                colors: [KColorThreed.withOpacity(0.2), Colors.transparent],
+                colors: [kColorThreed.withOpacity(0.2), Colors.transparent],
               ),
             ),
           ),
@@ -32,7 +34,7 @@ class Homebuildbackgroundeffects extends StatelessWidget {
               height: 300,
               decoration: BoxDecoration(
                 gradient: LinearGradient(
-                  colors: [KColorSecond.withOpacity(0.1), Colors.transparent],
+                  colors: [kColorSecond.withOpacity(0.1), Colors.transparent],
                 ),
               ),
             ),
