@@ -10,7 +10,7 @@ class Buildheader extends StatelessWidget {
       children: [
         const SizedBox(height: 80),
         Text(
-          'مرحباً بعودتك!',
+          'مرحباً بك!',
           style: GoogleFonts.cairo(
             fontSize: 32,
             fontWeight: FontWeight.bold,

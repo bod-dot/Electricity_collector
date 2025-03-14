@@ -1,6 +1,6 @@
  import 'package:flutter/material.dart';
 import 'package:untitled7/helper/constans.dart';
-import 'package:untitled7/models/Customer.dart';
+import 'package:untitled7/models/customer.dart';
 
   List<Widget> buildClientDetails(Customer item) {
     return [

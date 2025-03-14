@@ -1,4 +1,4 @@
-import 'package:flutter/gestures.dart';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:untitled7/Widgets/HomebuildAnimatedClientCards.dart';
@@ -7,7 +7,7 @@ import 'package:untitled7/Widgets/CustomTitleInHomePage.dart';
 import 'package:untitled7/cubit/home_cubit/home_cubit.dart';
 import 'package:untitled7/helper/constans.dart';
 
-import '../models/Customer.dart';
+import '../models/customer.dart';
 
 class Homebuildmaincontent extends StatelessWidget {
    const Homebuildmaincontent({super.key, required this.customers});

@@ -3,13 +3,13 @@ import 'package:meta/meta.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:untitled7/controllers/check_permissions_controller.dart';
 import 'package:untitled7/controllers/get_info_customer_controller.dart';
-import 'package:untitled7/models/Customer.dart';
+import 'package:untitled7/models/customer.dart';
 part 'home_state.dart';
 
 class HomeCubit extends Cubit<HomeState> {
   HomeCubit() : super(HomeInitial());
 
-
+List<Customer>customers=[];
 
   void getDataAndCheckPermission()
  async {
@@ -22,8 +22,9 @@ try{
      int checkPermissions=await CheckPermissions().checkPermissionsMeth(areaId: areaId, employeeID: employeeID);
      if(checkPermissions==1)
      {
-      List<Customer>customers = await GetInfoCustomerController().GetInfoCustomerMeth(areaId: areaId);
-      emit(HomeSuccess(customers: customers));
+    customers  = await GetInfoCustomerController().getInfoCustomerMeth(areaId: areaId);
+
+      emit(HomeSuccess());
 
 
      }
@@ -32,7 +33,7 @@ try{
      }
 }catch (e)
 {
-  print(e.toString());
+  
 emit(HomeFauler(err: e.toString()));
 }
     

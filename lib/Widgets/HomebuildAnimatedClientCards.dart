@@ -4,7 +4,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:untitled7/Widgets/CustometailRow.dart';
 import 'package:untitled7/helper/constans.dart';
 
-import '../models/Customer.dart';
+import '../models/customer.dart';
 
 class Homebuildanimatedclientcards extends StatelessWidget {
    const Homebuildanimatedclientcards({super.key, required this.customers});

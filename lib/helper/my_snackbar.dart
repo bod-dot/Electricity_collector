@@ -5,7 +5,7 @@ import 'package:flutter/material.dart';
 
 class Mysnackbar
 {
-  void showSnackbarError ({required String title,required BuildContext context ,required String Message ,required ContentType contentType})
+  void showSnackbarError ({required String title,required BuildContext context ,required String message ,required ContentType contentType})
 {
   final snackBar = SnackBar(
 
@@ -15,7 +15,7 @@ class Mysnackbar
     content: AwesomeSnackbarContent(
       title: title,
       message:
-     Message,
+     message,
 
 
       contentType: contentType,

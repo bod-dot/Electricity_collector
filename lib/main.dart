@@ -3,6 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:untitled7/Views/Pages/HomePage.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+import 'package:untitled7/Views/Pages/TakeReadingScreen.dart';
 import 'package:untitled7/cubit/home_cubit/home_cubit.dart';
 import 'Views/Pages/LoaginPage.dart';
 import 'helper/constans.dart';
@@ -24,8 +25,9 @@ class MyApp extends StatelessWidget {
       create: (context) => HomeCubit(),
       child: MaterialApp(
         routes: {
-          LoginScreen.Id: (context) => const LoginScreen(),
+          LoginScreen.id: (context) => const LoginScreen(),
           MainScreen.id: (context) => const MainScreen(),
+          TakeReadingScreen.id:(context)=>const TakeReadingScreen()
         },
         title: 'نظام إدارة العملاء',
         debugShowCheckedModeBanner: false,

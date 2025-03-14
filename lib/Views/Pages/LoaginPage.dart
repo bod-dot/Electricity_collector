@@ -12,7 +12,7 @@ import 'package:untitled7/helper/my_snackbar.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({super.key});
-  static String Id = 'LognPage';
+  static String id = 'LognPage';
 
   @override
   State<LoginScreen> createState() => _LoginScreenState();
@@ -33,13 +33,13 @@ class _LoginScreenState extends State<LoginScreen> {
               Mysnackbar().showSnackbarError(
                   title: "error",
                   context: context,
-                  Message: state.error,
+                  message: state.error,
                   contentType: ContentType.failure);
             } else if (state is LoginWrongPasswrodOrEmail) {
               Mysnackbar().showSnackbarError(
                   title: "خطاء ",
                   context: context,
-                  Message: "رقم المطقة او رقم الهاتف او كلمة السر خطاء ",
+                  message: "رقم المطقة او رقم الهاتف او كلمة السر خطاء ",
                   contentType: ContentType.failure);
             }
           },

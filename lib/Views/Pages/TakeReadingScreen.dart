@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:flutter_staggered_animations/flutter_staggered_animations.dart';
 import 'package:lottie/lottie.dart';
-import 'package:untitled7/Widgets/CusotmTextFormInTackNewReanding.dart';
+import 'package:untitled7/Widgets/cusotmTextFormInTackNewReanding.dart';
 import 'package:untitled7/Widgets/CustomButton.dart';
 
 
@@ -12,6 +12,7 @@ import '../../helper/constans.dart';
 
 class TakeReadingScreen extends StatefulWidget {
   const TakeReadingScreen({super.key});
+  static String id='ReadingScreen';
 
   @override
   State<TakeReadingScreen> createState() => _TakeReadingScreenState();

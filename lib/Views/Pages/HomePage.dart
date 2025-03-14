@@ -43,43 +43,7 @@ class _MainScreenState extends State<MainScreen> {
     }
   }
 
-  final List<Map<String, dynamic>> dataItems = [
-    {
-      'name': 'عميل 1',
-      'subscriber': '1001',
-      'date': '2025-03-01',
-      'amount': '500',
-      'progress': 0.8
-    },
-    {
-      'name': 'عميل 2',
-      'subscriber': '1002',
-      'date': '2025-03-05',
-      'amount': '750',
-      'progress': 0.6
-    },
-    {
-      'name': 'عميل 3',
-      'subscriber': '1003',
-      'date': '2025-03-10',
-      'amount': '300',
-      'progress': 0.4
-    },
-    {
-      'name': 'عميل 4',
-      'subscriber': '1004',
-      'date': '2025-03-15',
-      'amount': '450',
-      'progress': 0.9
-    },
-    {
-      'name': 'عميل 5',
-      'subscriber': '1005',
-      'date': '2025-03-20',
-      'amount': '600',
-      'progress': 0.7
-    },
-  ];
+ 
 
   @override
   void initState() {
@@ -107,7 +71,7 @@ class _MainScreenState extends State<MainScreen> {
                 child: CircularProgressIndicator(),
                 )
                 else if(state is HomeSuccess)
-                Homebuildmaincontent(customers: state.customers,)
+                Homebuildmaincontent(customers: BlocProvider.of<HomeCubit>(context).customers,)
                 
                 else if(state is HomeNotAllow)
                 NoPermissionScreen(onRetry:  () {},)

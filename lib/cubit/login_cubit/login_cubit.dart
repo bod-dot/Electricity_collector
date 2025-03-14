@@ -18,7 +18,7 @@ void loginCub({required int areaId,required int phoneNumber,required String pass
 
   }catch(e)
   {
-    print(e.toString());
+    
     emit(LoginFauild(error: e.toString()));
   }
 

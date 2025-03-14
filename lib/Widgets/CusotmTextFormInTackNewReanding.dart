@@ -4,12 +4,12 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:untitled7/helper/constans.dart';
 
 class Cusotmtextformintacknewreanding extends StatelessWidget {
-   Cusotmtextformintacknewreanding({super.key, required  this.label, required this.icon,  this.textInputType,this.validator,this.isEnable=true});
+   const Cusotmtextformintacknewreanding({super.key, required  this.label, required this.icon,  this.textInputType,this.validator,this.isEnable=true});
  final String label;
     final IconData icon;
-    TextInputType ?textInputType;
-    String? Function(String?)? validator;
-    bool isEnable;
+   final TextInputType ?textInputType;
+   final String? Function(String?)? validator;
+  final  bool isEnable;
   @override
   Widget build(BuildContext context) {
     return AnimationConfiguration.staggeredList(
@@ -38,6 +38,6 @@ class Cusotmtextformintacknewreanding extends StatelessWidget {
           ),
         ),
       ),
-    );;
+    );
   }
 }
